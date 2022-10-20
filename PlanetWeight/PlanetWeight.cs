@@ -39,7 +39,7 @@ namespace PlanetWeights
 
         // calculate weight mercury
         [DisplayName("Your Weight on that Planet:")]
-        public double weightOnPlanet
+        public double weightOnPlanet    
         {
             get
             {

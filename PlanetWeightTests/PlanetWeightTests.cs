@@ -12,9 +12,42 @@ namespace PlanetWeights.Tests
     public class PlanetWeightTests
     {
         [TestMethod()]
+        public void weightOnPlanetTest_weightOnPlanet_IsCorrectWeight()
+        {
+            // Arrange
+            PlanetWeight planetWeightTest = new PlanetWeight();
+            planetWeightTest.weight = 1.0;
+
+            // Act
+            planetWeightTest.planet = Planets.jupiter;
+            double convertedWeight =  planetWeightTest.weightOnPlanet;
+
+            // Assert
+            Assert.AreEqual(convertedWeight, 2.36);
+
+        }
+
+        [TestMethod()]
+        public void weightOnPlanetTest_weightOnPlanet_IsNegativeNumber()
+        {
+            // Arrange
+            PlanetWeight planetWeightTest = new PlanetWeight();
+            planetWeightTest.weight = -1.0;
+
+            // Act
+            planetWeightTest.planet = Planets.jupiter;
+            double convertedWeight = planetWeightTest.weightOnPlanet;
+
+            // Assert
+            Assert.AreEqual(convertedWeight, -2.36);
+
+        }
+
+        [TestMethod()]
         public void weightOnPlanetTest()
         {
-            Assert.Fail();
+            Assert.AreEqual(1, 1);
         }
+
     }
 }
